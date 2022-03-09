@@ -1,5 +1,6 @@
 # DinamicDBContext 
-DinamicDBContext class to provide a easy access to a DB, using SQL string query or statement, when you can't use a ORM. See documentation how to use.
+DinamicDBContext class to provide a easy access to a DB, using SQL string query or statement, when you can't use a ORM. See documentation how to use.<br>
+Yes, with I instead of Y.
 
 
 I disclame for you that DinamicDBContext must be used in a simple project, or project that you can't use a ORM, either by the complexity, or just a simple things.
@@ -14,15 +15,15 @@ using HudsonVentura;<br>
 <br>
 <br>
 
-### How to create a connection to one database
+### How to create a connection to database
 ```
 var stringConnection = $"User Id=DBUSER;Password=DBPASS;Data Source=DBHOST:DBPORT/DNNAME";
 var accessDB = new DinamicDBContext(new OracleConnection(stringConnection));
 ```
 
-### How to make a simple SELECT query with just a entry<br>
+### How to make a simple SELECT query with just an entry<br>
 ```
-string query = $"SELECT * FROM wfprocess WHERE p.fgstatus in (1, 4) AND coupaid = '{id}'"
+string query = $"SELECT * FROM wfprocess WHERE p.fgstatus in (1, 4) AND coupaid = '{id}'";
 var data = accessDB<MyClassToBind>queryOne(query);
 ```
 
