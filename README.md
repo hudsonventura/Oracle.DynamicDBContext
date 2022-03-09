@@ -22,12 +22,14 @@ var accessDB = new DinamicDBContext(new OracleConnection(stringConnection));
 
 ### How to make a simple SELECT query with just a entry<br>
 ```
-var data = accessDB<MyClassToBind>queryOne($" SELECT * FROM wfprocess WHERE p.fgstatus in (1, 4) AND coupaid = '{id}'"
+string query = $"SELECT * FROM wfprocess WHERE p.fgstatus in (1, 4) AND coupaid = '{id}'"
+var data = accessDB<MyClassToBind>queryOne(query);
 ```
 
 ### How to make a simple SELECT query with many entries<br>
 ```
-var data = accessDB<MyClassToBind>query($" SELECT * FROM wfprocess WHERE p.fgstatus in (1, 4) AND rownum <= 10"
+string query = $" SELECT * FROM wfprocess WHERE p.fgstatus in (1, 4) AND rownum <= 10";
+var data = accessDB<MyClassToBind>query(query);
 ```
 
 ### To prepare and query a statement<br>
@@ -37,5 +39,6 @@ In construction
 
 ### To execute a non query statement<br>
 ```
-var data = accessDB<MyClassToBind>execute($"UPDATE wfprocess set test = 'ok' WHERE coupaid = '{id}'"
+string query = $"UPDATE wfprocess set test = 'ok' WHERE coupaid = '{id}'";
+var data = accessDB<MyClassToBind>execute(query);
 ```

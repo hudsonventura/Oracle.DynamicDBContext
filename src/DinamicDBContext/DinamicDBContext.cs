@@ -93,7 +93,7 @@ namespace HudsonVentura {
         /// <param name="sql">String with your query</param>
         /// <param name="parameters">A Dictionary of parameters to prepared statement like NpgsqlParameter or OracleParameter</param>
         /// <returns>A object of your T class or null</returns>
-        internal T queryOne<T>(string sql, Dictionary<string, dynamic> parameters = null)
+        public T queryOne<T>(string sql, Dictionary<string, dynamic> parameters = null)
         {
             var list = this.query<T>(sql, parameters);
             if (list.Count >= 1)
@@ -104,7 +104,7 @@ namespace HudsonVentura {
         }
 
 
-        /// <summary>
+        /// <sumpublicmary>
         /// Execute a query on db and return a list of entry parsed to yout T class
         /// </summary>
         /// <typeparam name="T">Class to parse the return</typeparam>
