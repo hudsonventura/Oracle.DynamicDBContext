@@ -1,9 +1,9 @@
-# DinamicDBContext 
-DinamicDBContext class to provide a easy access to a DB, using SQL string query or statement, when you can't use a ORM. See documentation how to use.<br>
+# DynamicDBContext 
+DynamicDBContext class to provide a easy access to a DB, using SQL string query or statement, when you can't use a ORM. See documentation how to use.<br>
 Yes, with I instead of Y.
 
 
-I disclame for you that DinamicDBContext must be used in a simple project, or project that you can't use a ORM, either by the complexity, or just a simple things.
+I disclame for you that DynamicDBContext must be used in a simple project, or project that you can't use a ORM, either by the complexity, or just a simple things.
 
 If you want to talk to me, for any purpose, send me an email. hudsonventura@outlook.com
 
@@ -11,14 +11,14 @@ If you want to talk to me, for any purpose, send me an email. hudsonventura@outl
 
 ### The using...
 
-using HudsonVentura;<br>
+using Alphanet.Oracle;<br>
 <br>
 <br>
 
 ### How to create a connection to database
 ```
 var stringConnection = $"User Id=DBUSER;Password=DBPASS;Data Source=DBHOST:DBPORT/DNNAME";
-var accessDB = new DinamicDBContext(new OracleConnection(stringConnection));
+var accessDB = new DynamicDBContext(new OracleConnection(stringConnection));
 ```
 
 ### How to make a simple SELECT query with just an entry<br>
